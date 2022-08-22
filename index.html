@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Flipper</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="wrapper">
+            <div class="logo" id="main-logo">Card Flipper</div>
+            <div class="game">
+                <div class="game-container">
+                    <div class="game-area16">
+                        <div class="card flipcard" id="c0">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (15).png" id="15"></div>
+                            <div class="card-back" id="b15"></div>
+                        </div>
+                        <div class="card flipcard" id="c1">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (3).png" id="3"></div>
+                            <div class="card-back" id="b3"></div>
+                        </div>
+                        <div class="card flipcard" id="c2">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (5).png" id="5"></div>
+                            <div class="card-back" id="b5"></div>
+                        </div>
+                        <div class="card flipcard" id="c3">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (22).png" id="22"></div>
+                            <div class="card-back" id="b22"></div>
+                        </div>
+                        <div class="card flipcard" id="c4">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (22).png" id="22"></div>
+                            <div class="card-back" id="b22"></div>
+                        </div>
+                        <div class="card flipcard" id="c5">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (13).png" id="13"></div>
+                            <div class="card-back" id="b13"></div>
+                        </div>
+                        <div class="card flipcard" id="c6">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (3).png" id="3"></div>
+                            <div class="card-back" id="b3"></div>
+                        </div>
+                        <div class="card flipcard" id="c7">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (13).png" id="13"></div>
+                            <div class="card-back" id="b13"></div>
+                        </div>
+                        <div class="card flipcard" id="c8">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (16).png" id="16"></div>
+                            <div class="card-back" id="b16"></div>
+                        </div>
+                        <div class="card flipcard" id="c9">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji.png" id="25"></div>
+                            <div class="card-back" id="b25"></div>
+                        </div>
+                        <div class="card flipcard" id="c10">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (12).png" id="12"></div>
+                            <div class="card-back" id="b12"></div>
+                        </div>
+                        <div class="card flipcard" id="c11">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (12).png" id="12"></div>
+                            <div class="card-back" id="b12"></div>
+                        </div>
+                        <div class="card flipcard" id="c12">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji.png" id="25"></div>
+                            <div class="card-back" id="b25"></div>
+                        </div>
+                        <div class="card flipcard" id="c13">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (16).png" id="16"></div>
+                            <div class="card-back" id="b16"></div>
+                        </div>
+                        <div class="card flipcard" id="c14">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (15).png" id="15"></div>
+                            <div class="card-back" id="b15"></div>
+                        </div>
+                        <div class="card flipcard" id="c15">
+                            <div class="card-front"><img class="game-pics" src="../img/emoji (5).png" id="5"></div>
+                            <div class="card-back" id="b5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="status">
+                <div class="lives">Lives: <span id="lives-count">0</span></div>
+                <div class="timmer">Score: <span id="current-score">0</span></div>
+            </div>
+            <div class="option">
+                <div class="button" id="restart" onclick="location.reload()">Restart</div>
+                <div class="button" id="high-score">High Score</div>
+            </div>
+            <div class="footer">Kemp Liao 2022 Card Flipper</div>
+
+        </div>
+    </div>
+
+    <!--Start Menu-->
+    <div class="modal" id="start">
+        <div class="modal-container">
+            <div class="logo" id="start-logo">Card Flipper</div>
+            <div class="modal-text">Please choose difficulty</div>
+            <div class="button-group">
+                <div class="modal-text menu-button" onclick="createPanel(4)">Easy</div>
+                <div class="modal-text menu-button" onclick="createPanel(16)">Medium</div>
+                <div class="modal-text menu-button" onclick="createPanel(36)">Hard</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Win-->
+    <div class="modal display-none" id="win">
+        <div class="modal-container">
+            <div class="modal-text"><img src="../img/win.png" alt="" class="modal-pic"></div>
+            <div class="modal-text bigger-text">Well Done!</div>
+            <div class="modal-text">Your score: <span id="end-score-win"></span></div>
+            <div class="modal-text menu-button" onclick="location.reload()">Close</div>
+        </div>
+    </div>
+
+    <!--Lose-->
+    <div class="modal display-none" id="lose">
+        <div class="modal-container">
+            <div class="modal-text"><img src="../img/lose.png" alt="" class="modal-pic"></div>
+            <div class="modal-text bigger-text">Oops!</div>
+            <div class="modal-text">Your score: <span id="end-score-lose"></span></div>
+            <div class="modal-text menu-button" onclick="location.reload()">Close</div>
+        </div>
+    </div>
+
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

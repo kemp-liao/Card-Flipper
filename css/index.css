@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@font-face {
+    font-family: "blox2";
+    src: url("../font/Blox2.ttf");
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+#start-logo {
+    font-size:2em;
+    text-align: center;
+    margin: 10% 0% 5% 0%;
+}
+
+#main-logo {
+    font-size: 3em;
+    margin-bottom: 10%;
+}
+
+.game-container {
+    height: 50vh;
+    width: 50vh;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.game-area4 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-width: 100%;
+    min-height: 100%;
+    grid-template-rows: 50% 50%;
+}
+
+.game-area16 {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    min-width: 100%;
+    min-height: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.game-area36 {
+    display: grid;
+    grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
+    min-width: 100%;
+    min-height: 100%;
+    grid-template-rows: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
+}
+
+.card {
+    margin: 8%;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: auto;
+    height: auto;
+}
+
+.flipcard {
+    transform: rotateY(180deg);
+}
+
+.game-pics {
+    width: 80%;
+}
+
+.disable-click {
+    pointer-events: none;
+}
+
+.status {
+    margin: 5%;
+    padding: 3%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.lives {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.timmer {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.option {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+}
+
+.button {
+    padding: 8px 15px 1px 15px;
+    height: 30px;
+    width: fit-content;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.footer {
+    margin-top: 10%;
+}
+
+body {
+    font-family: 'Silkscreen', cursive;
+    margin: 0;
+	background: linear-gradient(-45deg, #81bae2, #23a6d5, #116bc1);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.modal-container {
+    height: 50vh;
+    width: 40vh;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.modal-text {
+    padding: 5% 5% 10% 5%;
+}
+
+.menu-button:hover,
+.button:hover {
+    color: #116bc1;
+    cursor: pointer;
+}
+
+.bigger-text {
+    font-size: 1em;
+}
+
+.modal-pic {
+    width: 45%;
+}
+
+.display-none {
+    display: none;
+}
