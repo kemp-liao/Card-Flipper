@@ -2,6 +2,8 @@
 
 Simple card flip game. Three difficulties can be chosen - easy (4 cards), medium (16 cards) and hard (36 cards).
 
+Use Google Chrome.
+
 Demo - https://simple-card-flipper.herokuapp.com/
 
 # Technologies
